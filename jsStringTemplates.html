@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js String Templates</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        text=`This 
+        is 
+        'Anmol' 
+        "Maharjan".`;
+        //Template literals allows multiline strings:
+        //With template literals, you can use both single and double quotes inside a string:
+        //Template Literals use back-ticks (``) rather than the quotes ("") to define a string:
+        document.getElementById('demo1').innerHTML=text;
+
+        firstName='Anmol';
+        lastName='Maharjan';
+        document.getElementById('demo2').innerHTML=`This is Mr. ${firstName} ${lastName}.`;
+
+        p=10000;
+        t=1;
+        r=8;
+        document.getElementById('demo3').innerHTML=`Interest: ${(p*t*r/100)}`;
+
+        header = 'Templates Literals';
+        tags = ['templates literals','javascript','ps5'];
+
+        html = `<h2>${header}</h2><ul>`;
+        for (x of tags) {
+            html += `<li>${x}</li>`;
+        }
+        html += `</ul>`;
+        document.getElementById("demo4").innerHTML = html;
+    </script>
+</body>
+</html>
